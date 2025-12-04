@@ -130,13 +130,13 @@ const response = await fetch("https://api.siliconflow.cn/v1/chat/completions", {
 
 ```bash
 npm install
-cd backend
+cd my-backend
 npm install
 ```
 
 ### 2. 配置 API Key（后端）
 
-文件：`backend/.env`
+文件：`my-backend/.env`
 
 ```env
 SILICONFLOW_API_KEY=你的密钥
@@ -145,13 +145,14 @@ SILICONFLOW_API_KEY=你的密钥
 ### 3. 启动后端
 
 ```bash
-cd backend
-node server.js
+cd my-backend
+npm run dev
 ```
 
 ### 4. 启动前端（DevTools Panel）
 
 ```bash
+cd my-devtools-extension
 npm run build
 ```
 
