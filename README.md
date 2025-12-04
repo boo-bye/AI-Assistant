@@ -37,7 +37,7 @@ AI DevTools Assistant 是一个基于 **Chrome DevTools 扩展**的前端开发�
 ## 🏗 技术架构图与说明
 
 
-<img src="./assets/image1.png" alt="图片说明" style="zoom: 33%;" />
+<img src="./asserts/image1.png" alt="图片说明" style="zoom: 33%;" />
 
 ### 架构说明
 
