@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "AI DevTools Assistant",
+  "version": "1.0.0",
+  "description": "基于 AI 的前端开发者智能助手，帮助分析和优化网页",
+  
+  "permissions": ["devtools", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  
+  "devtools_page": "devtools.html",
+  
+  "background": {
+    "service_worker": "dist/background.js",
+    "type": "module"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dist/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  
+  "action": {
+    "default_title": "AI DevTools Assistant"
+  }
+}

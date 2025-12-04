@@ -1,0 +1,24 @@
+{
+  "name": "ai-devtools-extension",
+  "version": "1.0.0",
+  "description": "Web 前端智能开发者助手",
+  "scripts": {
+    "build": "npm run build:panel && npm run build:background && npm run build:content",
+    "build:panel": "esbuild src/index.tsx --bundle --outfile=dist/panel.js --loader:.css=text --external:chrome",
+    "build:background": "esbuild src/background.ts --bundle --outfile=dist/background.js --platform=browser --external:chrome",
+    "build:content": "esbuild src/content.ts --bundle --outfile=dist/content.js --external:chrome",
+    "dev": "npm run build && echo '✅ 构建完成，请在 Chrome 中重新加载扩展'"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.31",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "esbuild": "^0.19.0",
+    "tsx": "^3.13.0",
+    "typescript": "^5.2.2"
+  }
+}
